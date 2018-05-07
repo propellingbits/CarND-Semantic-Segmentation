@@ -7,7 +7,7 @@ The output images are stored in the "run" folder.
 ## Architecture
 The pretrained VGG-16 model is already fully convolutional, containing all the convolutions that replace the fully connected layers and retain spatial information. We must add 1x1 convolutions on top of the VGG to reduce the number of filters from 4096 to the number of classes for our specific model (in this case, two: road and not-road). 
 
-## loss and optimizer operations
+## Loss and optimizer operations
 A loss function is required. That way, we can approach training a FCN just like we would approach training a normal classification CNN.
 
 In the case of a FCN, the goal is to assign each pixel to the appropriate class. A great loss function for this setup would be cross entropy loss! The output tensor is 4D so we have to reshape it to 2D. And, an Adam optimizer is used.
@@ -21,7 +21,7 @@ The hyperparameters used for training are:
 - batch_size: 10
 
 
-### Setup
+## Project Setup
 ##### Frameworks and Packages
 Make sure you have the following is installed:
  - [Python 3](https://www.python.org/)
